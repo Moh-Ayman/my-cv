@@ -22,10 +22,10 @@
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #333;
         }
         a:hover {
-            color: #0056b3;
+            color: #666;
         }
 
         /* Layout */
@@ -37,83 +37,98 @@
         /* Sidebar for Navigation */
         .sidebar {
             position: fixed;
-            width: 250px;
-            background-color: #343a40;
+            width: 200px;
+            background-color: #fff;
             padding: 20px;
             height: 100%;
-            color: #fff;
+            border-right: 1px solid #ddd;
+            color: #333;
         }
         .sidebar h2 {
-            color: #fff;
             text-align: center;
             margin-bottom: 30px;
+            font-size: 1.2em;
         }
         .sidebar a {
             display: block;
-            padding: 10px 15px;
-            margin-bottom: 15px;
-            background-color: #495057;
-            color: white;
-            border-radius: 4px;
+            padding: 8px 0;
+            margin-bottom: 10px;
+            color: #333;
             text-align: center;
         }
         .sidebar a:hover {
-            background-color: #007bff;
-            transform: scale(1.05);
-            transition: all 0.3s ease;
+            background-color: #f0f0f0;
         }
 
         /* Main Content */
         .main-content {
-            margin-left: 270px;
+            margin-left: 220px;
             padding: 20px;
             flex: 1;
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         /* Header Styling */
         header {
-            background-color: #007bff;
-            color: white;
+            background-color: #fff;
+            color: #333;
             padding: 20px;
-            text-align: center;
-            border-radius: 8px;
+            text-align: left; /* Left align header */
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
         }
+
+        /* Image and Text in Header */
+        .header-image {
+            margin-right: 20px;
+            border-radius: 50%; /* Makes the image circular */
+            width: 100px; /* Controls image size */
+            height: 100px;
+            object-fit: cover; /* Ensures the image fits within the circle */
+        }
+
         header h1 {
-            font-size: 2.5em;
+            font-size: 2em;
+            margin: 0;
         }
+
         header p {
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         /* Section Styling */
         h2 {
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 10px;
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            color: #333;
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         ul li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
+
         ul li::before {
             content: "• ";
-            color: #007bff;
+            color: #333;
         }
 
         /* Experience Cards */
         .experience-card {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
             margin-bottom: 20px;
         }
 
@@ -122,34 +137,33 @@
             display: flex;
             flex-wrap: wrap;
         }
+
         .skills-list li {
-            background-color: #e9ecef;
-            padding: 10px 20px;
-            border-radius: 30px;
+            background-color: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 20px;
             margin-right: 10px;
             margin-bottom: 10px;
+            font-size: 0.9em;
         }
 
-        /* Interactive Hover Effect */
-        .experience-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
+        /* Scroll to Top Button */
         .scroll-top {
             position: fixed;
             right: 20px;
             bottom: 20px;
-            background-color: #007bff;
+            background-color: #333;
             color: white;
-            padding: 10px 15px;
+            padding: 10px;
             border-radius: 50%;
-            font-size: 1.5em;
+            font-size: 1.2em;
             cursor: pointer;
             display: none;
             transition: all 0.3s ease;
         }
+
         .scroll-top:hover {
-            background-color: #0056b3;
+            background-color: #555;
         }
     </style>
 </head>
@@ -172,9 +186,12 @@
         <!-- Main Content -->
         <div class="main-content">
             <header>
+                <img src="your-image.jpg" alt="Your Photo" class="header-image">
+                <div>
                 <h1>Mohamed Ayman Ibrahim Khalil</h1>
-                <p>Address: Smouha, Alexandria, Egypt | Mob: (+2) 01010020388 / 01119969388</p>
+                <p>Smouha, Alexandria, Egypt | Mob: (+2) 01010020388 / 01119969388</p>
                 <p>Email: <a href="mailto:moh.ayman.ibrahim.khalil@gmail.com">moh.ayman.ibrahim.khalil@gmail.com</a></p>
+                </div>
             </header>
 
             <!-- Career Objective Section -->
@@ -194,7 +211,6 @@
                         <li>Build architecture governance model for technical dept</li>
                         <li>Initiating data governance program</li>
                         <li>Responsible for high-level and low-level designs for Analytics solutions</li>
-                        <!-- Additional details -->
                     </ul>
                 </div>
 
@@ -204,11 +220,8 @@
                         <li>Setting Data Engineering Team Foundation</li>
                         <li>Developing high-performing data pipelines</li>
                         <li>Responsible for onboarding Cribl Logstream as a Realtime Data Transfer/Transform Tool</li>
-                        <!-- Additional details -->
                     </ul>
                 </div>
-
-                <!-- Add more experiences in similar fashion -->
             </section>
 
             <!-- Education Section -->
@@ -229,7 +242,6 @@
                     <li>Apache NiFi Data and System Administration</li>
                     <li>Cribl Data and System Administration</li>
                     <li>Dataiku for Analytics</li>
-                    <!-- Add more skills here -->
                 </ul>
             </section>
 
@@ -239,7 +251,6 @@
                 <ul>
                     <li>Design & Implemented Sync between DynamicsCRM & HubSpot using GCP Tools | UPWORK (2023)</li>
                     <li>Design & Implemented Data Platform Using MongoDB, Google Func., BQ & Looker | UPWORK (2022)</li>
-                    <!-- Add more projects here -->
                 </ul>
             </section>
 
@@ -249,7 +260,6 @@
                 <ul>
                     <li>Top Talent of the Year | Vodafone (2023)</li>
                     <li>Create The Future Reward | Vodafone (2022)</li>
-                    <!-- Add more awards here -->
                 </ul>
             </section>
 
@@ -259,7 +269,6 @@
                 <ul>
                     <li>TOGAF 9 Level 1 and 2</li>
                     <li>Dataiku for Analytics & ML</li>
-                    <!-- Add more training -->
                 </ul>
             </section>
 
@@ -269,7 +278,6 @@
                 <ul>
                     <li>_VOIS International Hackathon 2023 - Judge</li>
                     <li>Former Table Tennis First Team Player at Smouha Club</li>
-                    <!-- Add more activities -->
                 </ul>
             </section>
         </div>
